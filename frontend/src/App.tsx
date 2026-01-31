@@ -1,6 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { DashboardLayout } from "@/components/layout/DashboardLayout";
 import Dashboard from "@/pages/Dashboard";
+import Analytics from "@/pages/Analytics";
+import Devices from "@/pages/Devices";
+import Settings from "@/pages/Settings";
 import { ToastProvider } from "@/components/ui/ToastProvider";
 
 function App() {
@@ -10,26 +13,9 @@ function App() {
         <Routes>
           <Route path="/" element={<DashboardLayout />}>
             <Route index element={<Dashboard />} />
-            <Route
-              path="apartments"
-              element={
-                <div className="p-4 text-white">
-                  My Apartments (Coming Soon)
-                </div>
-              }
-            />
-            <Route
-              path="reporting"
-              element={
-                <div className="p-4 text-white">Reporting (Coming Soon)</div>
-              }
-            />
-            <Route
-              path="settings"
-              element={
-                <div className="p-4 text-white">Settings (Coming Soon)</div>
-              }
-            />
+            <Route path="analytics" element={<Analytics />} />
+            <Route path="devices" element={<Devices />} />
+            <Route path="settings" element={<Settings />} />
           </Route>
         </Routes>
       </BrowserRouter>
