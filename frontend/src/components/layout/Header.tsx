@@ -1,7 +1,6 @@
 import { Bell, Search, User } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/utils/cn";
-import { Link, useLocation } from "react-router-dom";
 import { useToast } from "@/components/ui/ToastProvider";
 
 export function Header() {
